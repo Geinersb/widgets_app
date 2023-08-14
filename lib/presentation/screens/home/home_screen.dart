@@ -66,7 +66,7 @@ class _CustomListTile extends StatelessWidget {
         context.push(menuItem.url);
         
       },
-      splashColor: colors.primary,
+      //splashColor: colors.primary,
     );
   }
 }
