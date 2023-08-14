@@ -6,9 +6,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Widgets en Flutter'),
+        foregroundColor: colors.primary,
       ),
       body: const _HomeView(),
     );
@@ -32,7 +35,7 @@ class _HomeView extends StatelessWidget {
 }
 
 class _CustomListTile extends StatelessWidget {
-  const _CustomListTile({   
+  const _CustomListTile({
     required this.menuItem,
   });
 
@@ -40,11 +43,17 @@ class _CustomListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Icon(menuItem.icon),
-title: Text(menuItem.title),
-subtitle: Text(menuItem.subtitle),
+    final colors = Theme.of(context).colorScheme;
 
+    return ListTile(      
+      leading: Icon(menuItem.icon, color: colors.primary),
+      trailing: Icon(Icons.arrow_forward_ios_rounded,color: colors.primary),
+      title: Text(menuItem.title),
+      subtitle: Text(menuItem.subtitle),
+      onTap: (){
+// TODO navegar a otra pantalla 
+      },
+      splashColor: colors.primary,
     );
   }
 }
