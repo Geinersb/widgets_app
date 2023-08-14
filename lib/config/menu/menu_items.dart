@@ -35,6 +35,13 @@ const appMenuItems = <MenuItem>[
      icon: Icons.refresh_rounded
      ),
 
+  MenuItem(
+    title: 'Snackbars y Dialogos', 
+    subtitle: 'Indicadores en patalla',
+     url: '/snackbars', 
+     icon: Icons.info_outline_rounded
+     ),
+
 
 
 ];
