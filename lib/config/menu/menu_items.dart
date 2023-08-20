@@ -15,6 +15,11 @@ class MenuItem {
 
 const appMenuItems = <MenuItem>[
   MenuItem(
+      title: 'Counter Riverpod',
+      subtitle: 'Contador para manejar estados Riverpod',
+      url: '/counter',
+      icon: Icons.format_list_numbered),
+  MenuItem(
       title: 'Botones',
       subtitle: 'Varios botones en Flutter',
       url: '/buttons',
